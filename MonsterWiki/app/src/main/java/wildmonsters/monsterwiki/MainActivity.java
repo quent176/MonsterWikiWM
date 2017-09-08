@@ -8,14 +8,17 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+
 ArrayList<listeMonstre> arrayofliste;
     listeMonstreAdapter adapter;
     ListView lv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         arrayofliste = new ArrayList<listeMonstre>();
         adapter = new listeMonstreAdapter(this, arrayofliste);
