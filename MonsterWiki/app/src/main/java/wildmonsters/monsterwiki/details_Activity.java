@@ -43,12 +43,3 @@ public class details_Activity extends AppCompatActivity {
 
 }
 
-<<<<<<< HEAD
-/*
-
- */
-=======
-
-
-
->>>>>>> 844e7afe4f77411b46be318d10fe009b8903dcab
