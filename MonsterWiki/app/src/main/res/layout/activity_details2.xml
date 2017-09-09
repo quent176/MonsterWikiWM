@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@android:color/white"
         android:baselineAligned="false"
         android:orientation="vertical"
         android:weightSum="1">
 
 
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
 
         <TextView
@@ -57,7 +54,7 @@
                     android:text="Monster evolution" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageMonsterMain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -66,20 +63,21 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_weight="1"
+                android:layout_height="121dp"
+                android:layout_weight="1.00"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/monsterElement"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/elementMonster"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Monster Element" />
+                    android:layout_weight="0.56"
+                    android:gravity="center"
+                    android:text="Element" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageElementMonster"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -273,7 +271,7 @@
                     android:text="Evolution 0" />
 
                 <ImageView
-                    android:id="@+id/imageView14"
+                    android:id="@+id/monsterEvolZero"
                     android:layout_width="match_parent"
                     android:layout_height="113dp"
                     android:gravity="center"
@@ -296,7 +294,7 @@
                     android:text="Evolution 1" />
 
                 <ImageView
-                    android:id="@+id/imageView15"
+                    android:id="@+id/monsterEvolUn"
                     android:layout_width="match_parent"
                     android:layout_height="113dp"
                     android:gravity="center"
@@ -319,7 +317,7 @@
                     android:text="Evolution 2" />
 
                 <ImageView
-                    android:id="@+id/imageView16"
+                    android:id="@+id/monsterEvolDeux"
                     android:layout_width="match_parent"
                     android:layout_height="113dp"
                     android:gravity="center"
@@ -342,7 +340,7 @@
                     android:text="Evolution 3" />
 
                 <ImageView
-                    android:id="@+id/imageView17"
+                    android:id="@+id/monsterEvolTrois"
                     android:layout_width="match_parent"
                     android:layout_height="113dp"
                     android:gravity="center"
