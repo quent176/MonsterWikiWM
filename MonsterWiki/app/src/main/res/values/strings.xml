@@ -5,7 +5,7 @@
     <string name="evolutionLvl">evolution level</string>
     <string name="elementType">element type</string>
 
-    <string-array name="monster1">
+    <string-array name="1">
         <item name="power">100</item>
         <item name="life">45</item>
         <item name="speed">76</item>

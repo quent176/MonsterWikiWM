@@ -1,18 +1,16 @@
 package wildmonsters.monsterwiki;
 
-import android.app.Activity;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import android.content.Intent;
 import android.view.View;
-import android.view.Menu;
+
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.graphics.drawable.Drawable;
+
 
 import java.util.ArrayList;
 
