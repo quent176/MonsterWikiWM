@@ -39,7 +39,6 @@ public class details_Activity extends AppCompatActivity {
     ImageView monstreEvolution3;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,7 @@ public class details_Activity extends AppCompatActivity {
                 Gravity.CENTER);
         TextView titleActionBar = (TextView) viewActionBar.findViewById(R.id.action_bar_title);
         titleActionBar.setText("THE MONSTER");
-        Typeface police = Typeface.createFromAsset(getAssets(),"fonts/Curse_Casual.ttf");
+        Typeface police = Typeface.createFromAsset(getAssets(), "fonts/Curse_Casual.ttf");
         titleActionBar.setTypeface(police);
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
@@ -65,7 +64,7 @@ public class details_Activity extends AppCompatActivity {
 
         ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
 
-        int monsterID;
+        final int monsterID;
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -77,8 +76,8 @@ public class details_Activity extends AppCompatActivity {
 
         nomMonstre = (TextView) findViewById(R.id.monsterName);
 
-        evolutionMonstre= (TextView) findViewById(R.id.monsterEvolution);
-        imageMonsterMain= (ImageView) findViewById(R.id.imageMonsterMain);
+        evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
+        imageMonsterMain = (ImageView) findViewById(R.id.imageMonsterMain);
 
         evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
         elementMonstre = (TextView) findViewById(R.id.elementMonster);
@@ -96,9 +95,9 @@ public class details_Activity extends AppCompatActivity {
         monstreEvolution3 = (ImageView) findViewById(R.id.monsterEvolTrois);
 
 
-        Typeface police4 = Typeface.createFromAsset(getAssets(),"fonts/UnZialish.ttf");
+        Typeface police4 = Typeface.createFromAsset(getAssets(), "fonts/UnZialish.ttf");
         nomMonstre.setTypeface(police4);
-        Typeface police2 = Typeface.createFromAsset(getAssets(),"fonts/Curse_Casual.ttf");
+        Typeface police2 = Typeface.createFromAsset(getAssets(), "fonts/Curse_Casual.ttf");
         evolutionMonstre.setTypeface(police2);
         elementMonstre.setTypeface(police2);
         monstreSpec.setTypeface(police2);
@@ -124,7 +123,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 1) {
+        else if (monsterID == 1) {
             nomMonstre.setText("Arch Knight");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_1));
@@ -139,7 +138,7 @@ public class details_Activity extends AppCompatActivity {
             monstreEvolution3.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_3));
         }
 
-        if (monsterID == 2) {
+       else if (monsterID == 2) {
             nomMonstre.setText("Genie");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.genie_1));
@@ -154,7 +153,7 @@ public class details_Activity extends AppCompatActivity {
             monstreEvolution3.setImageDrawable(getResources().getDrawable(R.drawable.genie_3));
         }
 
-        if (monsterID == 3) {
+       else if (monsterID == 3) {
             nomMonstre.setText("Light Spirit");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_1));
@@ -170,7 +169,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 4) {
+       else if (monsterID == 4) {
             nomMonstre.setText("Metalsaur");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_1));
@@ -187,7 +186,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 5) {
+       else if (monsterID == 5) {
             nomMonstre.setText("Panda");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.panda_1));
@@ -204,7 +203,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 6) {
+        else if (monsterID == 6) {
             nomMonstre.setText("Rockilla");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_1));
@@ -221,7 +220,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 7) {
+        else if (monsterID == 7) {
             nomMonstre.setText("Thunder Eagle");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_1));
@@ -238,7 +237,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 8) {
+        else if (monsterID == 8) {
             nomMonstre.setText("Tyrannoling");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.tyrannoking_1));
@@ -255,7 +254,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
-        if (monsterID == 9) {
+        else if (monsterID == 9) {
             nomMonstre.setText("Turtle");
             evolutionMonstre.setText("Niveau 1");
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.turtle_1));
@@ -269,8 +268,360 @@ public class details_Activity extends AppCompatActivity {
             monstreEvolution2.setImageDrawable(getResources().getDrawable(R.drawable.turtle_2));
             monstreEvolution3.setImageDrawable(getResources().getDrawable(R.drawable.turtle_3));
 
-
         }
 
+        monstreEvolution0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (monsterID == 0) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 1) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 2) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.genie_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 3) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 4) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 5) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.panda_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 6) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 7) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 8) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.tyrannoking_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 9) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.turtle_0));
+                    evolutionMonstre.setText("Niveau 0");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+
+            }
+
+        });
+
+        monstreEvolution1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (monsterID == 0) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+
+                else if (monsterID == 1) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 2) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.genie_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 3) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 4) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 5) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.panda_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 6) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 7) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 8) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.tyrannoking_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+                else if (monsterID == 9) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.turtle_1));
+                    evolutionMonstre.setText("Niveau 1");
+                    lifeMonstre.setText("20");
+                    powerMonstre.setText("14");
+                    speedMonstre.setText("26");
+                    staminaMonstre.setText("10");
+                }
+
+            }
+
+        });
+
+        monstreEvolution2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (monsterID == 0) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 1) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+
+                else if (monsterID == 2) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.genie_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 3) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 4) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 5) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.panda_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 6) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 7) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 8) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.tyrannoking_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+                else if (monsterID == 9) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.turtle_2));
+                    evolutionMonstre.setText("Niveau 4");
+                    lifeMonstre.setText("2000");
+                    powerMonstre.setText("1674");
+                    speedMonstre.setText("2654");
+                    staminaMonstre.setText("1860");
+                }
+            }
+
+        });
+
+        monstreEvolution3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (monsterID == 0) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+
+                else if (monsterID == 1) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.arch_knight_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 2) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.genie_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 3) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 4) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 5) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.panda_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 6) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 7) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 8) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.tyrannoking_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+                else if (monsterID == 9) {
+                    imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.turtle_3));
+                    evolutionMonstre.setText("Niveau 7");
+                    lifeMonstre.setText("20050");
+                    powerMonstre.setText("16744");
+                    speedMonstre.setText("26547");
+                    staminaMonstre.setText("15860");
+                }
+
+            }
+
+        });
     }
 }

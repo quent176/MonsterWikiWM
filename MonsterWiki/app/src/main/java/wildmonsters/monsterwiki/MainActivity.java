@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
-        abar.setDisplayHomeAsUpEnabled(true);
-        abar.setHomeButtonEnabled(true);
+        abar.setDisplayHomeAsUpEnabled(false);
+        abar.setHomeButtonEnabled(false);
 
         ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
 

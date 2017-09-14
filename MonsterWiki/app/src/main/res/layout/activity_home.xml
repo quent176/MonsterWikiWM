@@ -16,7 +16,19 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/imagen_monster_legends_0big" />
 
-    <TextView
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/homebtn"
+        android:text="@string/welcome"
+        android:padding="10dp"
+        android:textColor="#FFF"
+        android:textSize="24dp" />
+
+    <!--- <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +39,6 @@
         android:gravity="center"
         android:text="@string/welcome"
         android:textColor="#EEEEEE"
-        android:textSize="40dp" />
+        android:textSize="40dp" /> -->
 
 </RelativeLayout>
