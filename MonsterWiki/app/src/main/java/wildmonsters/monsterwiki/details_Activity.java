@@ -1,7 +1,9 @@
 package wildmonsters.monsterwiki;
 
+
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -25,6 +27,7 @@ public class details_Activity extends AppCompatActivity {
     TextView monstreSpec;
     TextView monstreEvolution;
     ImageView imageMonsterMain;
+
     ImageView imageElement;
     TextView lifeMonstre;
     TextView powerMonstre;
@@ -73,6 +76,10 @@ public class details_Activity extends AppCompatActivity {
         }
 
         nomMonstre = (TextView) findViewById(R.id.monsterName);
+
+        evolutionMonstre= (TextView) findViewById(R.id.monsterEvolution);
+        imageMonsterMain= (ImageView) findViewById(R.id.imageMonsterMain);
+
         evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
         elementMonstre = (TextView) findViewById(R.id.elementMonster);
         monstreSpec = (TextView) findViewById(R.id.monsterSpec);
@@ -88,6 +95,7 @@ public class details_Activity extends AppCompatActivity {
         monstreEvolution2 = (ImageView) findViewById(R.id.monsterEvolDeux);
         monstreEvolution3 = (ImageView) findViewById(R.id.monsterEvolTrois);
 
+
         Typeface police4 = Typeface.createFromAsset(getAssets(),"fonts/UnZialish.ttf");
         nomMonstre.setTypeface(police4);
         Typeface police2 = Typeface.createFromAsset(getAssets(),"fonts/Curse_Casual.ttf");
@@ -100,7 +108,9 @@ public class details_Activity extends AppCompatActivity {
         if (monsterID == 0) {
             nomMonstre.setText("Fire Lion");
             evolutionMonstre.setText("Niveau 1");
+
             elementMonstre.setText("Element");
+
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_1));
             imageElement.setImageDrawable(getResources().getDrawable(R.drawable.fire));
             lifeMonstre.setText("242");
@@ -111,6 +121,7 @@ public class details_Activity extends AppCompatActivity {
             monstreEvolution1.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_1));
             monstreEvolution2.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_2));
             monstreEvolution3.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_3));
+
         }
 
         if (monsterID == 1) {
