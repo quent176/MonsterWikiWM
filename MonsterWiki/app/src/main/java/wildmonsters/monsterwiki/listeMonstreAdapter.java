@@ -1,6 +1,7 @@
 package wildmonsters.monsterwiki;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +18,7 @@ public class listeMonstreAdapter extends ArrayAdapter<listeMonstre> {
 
     public listeMonstreAdapter(Context context, ArrayList<listeMonstre> liste){
         super(context, 0, liste);
+
     }
 
     @NonNull
