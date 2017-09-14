@@ -1,6 +1,8 @@
 package wildmonsters.monsterwiki;
 
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -8,6 +10,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -42,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         listeMonstre monstre8 = new listeMonstre("Thunder Eagle", "Thunder", R.drawable.thunder_eagle_1);
         listeMonstre monstre9 = new listeMonstre("Tyrannoking", "Dark", R.drawable.tyrannoking_1);
         listeMonstre monstre10 = new listeMonstre("Turtle", "Water", R.drawable.turtle_1);
-
-
 
         adapter.add(monstre1);
         adapter.add(monstre2);
