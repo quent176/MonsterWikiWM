@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Monster Wiki</string>
+    <string name="app_name">Monster Legends Wiki</string>
     <string name="monsterName">Monster Name</string>
     <string name="evolutionImage">evolution image</string>
     <string name="evolutionLvl">evolution level</string>
     <string name="elementType">element type</string>
+    <string name="welcome">Welcome</string>
 
     <string-array name="monster1">
         <item name="power">100</item>

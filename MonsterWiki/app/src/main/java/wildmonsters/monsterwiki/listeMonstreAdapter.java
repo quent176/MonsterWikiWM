@@ -31,11 +31,20 @@ public class listeMonstreAdapter extends ArrayAdapter<listeMonstre> {
         TextView nomMonstre = (TextView)convertView.findViewById(R.id.nomMonstre);
         TextView nomElement = (TextView)convertView.findViewById(R.id.nomElement);
         ImageView imageMonstre = (ImageView)convertView.findViewById(R.id.imageMonstre);
+        ImageView imageElement = (ImageView)convertView.findViewById(R.id.imageElement);
 
         nomMonstre.setText(listeM.nomMonstre);
         nomElement.setText(listeM.nomElement);
         imageMonstre.setImageResource(listeM.imageMonstre);
+        imageElement.setImageResource(listeM.imageElement);
+
+        Typeface police1 = Typeface.createFromAsset(getContext().getAssets(),"fonts/UnZialish.ttf");
+        nomMonstre.setTypeface(police1);
+        Typeface police2 = Typeface.createFromAsset(getContext().getAssets(),"fonts/Curse_Casual.ttf");
+        nomElement.setTypeface(police2);
 
         return convertView;
     }
+
+
 }

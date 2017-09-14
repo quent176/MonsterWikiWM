@@ -1,10 +1,13 @@
 package wildmonsters.monsterwiki;
 
 
-import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.content.Intent;
 import android.view.View;
@@ -29,22 +32,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Customize the ActionBar
+        final ActionBar abar = getSupportActionBar();
+
+        View viewActionBar = getLayoutInflater().inflate(R.layout.action_bar, null);
+        ActionBar.LayoutParams params = new ActionBar.LayoutParams(//Center the textview in the ActionBar !
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                ActionBar.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER);
+        TextView titleActionBar = (TextView) viewActionBar.findViewById(R.id.action_bar_title);
+        titleActionBar.setText("MONSTERS LIST");
+        Typeface police = Typeface.createFromAsset(getAssets(),"fonts/Curse_Casual.ttf");
+        titleActionBar.setTypeface(police);
+        abar.setCustomView(viewActionBar, params);
+        abar.setDisplayShowCustomEnabled(true);
+        abar.setDisplayShowTitleEnabled(false);
+        abar.setDisplayHomeAsUpEnabled(true);
+        abar.setHomeButtonEnabled(true);
+
+        ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
+
 
         arrayofliste = new ArrayList<listeMonstre>();
         adapter = new listeMonstreAdapter(this, arrayofliste);
         lv = (ListView) findViewById(R.id.list_monster);
         lv.setAdapter(adapter);
 
-        listeMonstre monstre1 = new listeMonstre("Fire Lion", "Fire", R.drawable.fire_lion_1);
-        listeMonstre monstre2 = new listeMonstre("Arch Knight", "Legend", R.drawable.arch_knight_1);
-        listeMonstre monstre3 = new listeMonstre("Genie", "Magic", R.drawable.genie_1);
-        listeMonstre monstre4 = new listeMonstre("Light Spirit", "Light", R.drawable.light_spirit_1);
-        listeMonstre monstre5 = new listeMonstre("Metalsaur", "Metal", R.drawable.metalsaur_1);
-        listeMonstre monstre6 = new listeMonstre("Panda", "Nature", R.drawable.panda_1);
-        listeMonstre monstre7 = new listeMonstre("Rockilla", "Earth", R.drawable.rockilla_1);
-        listeMonstre monstre8 = new listeMonstre("Thunder Eagle", "Thunder", R.drawable.thunder_eagle_1);
-        listeMonstre monstre9 = new listeMonstre("Tyrannoking", "Dark", R.drawable.tyrannoking_1);
-        listeMonstre monstre10 = new listeMonstre("Turtle", "Water", R.drawable.turtle_1);
+        listeMonstre monstre1 = new listeMonstre("Fire Lion", "Fire", R.drawable.fire_lion_1, R.drawable.fire);
+        listeMonstre monstre2 = new listeMonstre("Arch Knight", "Legend", R.drawable.arch_knight_1, R.drawable.legend);
+        listeMonstre monstre3 = new listeMonstre("Genie", "Magic", R.drawable.genie_1, R.drawable.magic);
+        listeMonstre monstre4 = new listeMonstre("Light Spirit", "Light", R.drawable.light_spirit_1, R.drawable.light);
+        listeMonstre monstre5 = new listeMonstre("Metalsaur", "Metal", R.drawable.metalsaur_1, R.drawable.metal);
+        listeMonstre monstre6 = new listeMonstre("Panda", "Nature", R.drawable.panda_1, R.drawable.nature);
+        listeMonstre monstre7 = new listeMonstre("Rockilla", "Earth", R.drawable.rockilla_1, R.drawable.earth);
+        listeMonstre monstre8 = new listeMonstre("Thunder Eagle", "Thunder", R.drawable.thunder_eagle_1,R.drawable.thunder);
+        listeMonstre monstre9 = new listeMonstre("Tyrannoking", "Dark", R.drawable.tyrannoking_1, R.drawable.dark);
+        listeMonstre monstre10 = new listeMonstre("Turtle", "Water", R.drawable.turtle_1, R.drawable.water);
+
+
 
         adapter.add(monstre1);
         adapter.add(monstre2);
@@ -72,5 +97,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    }
-
+}
