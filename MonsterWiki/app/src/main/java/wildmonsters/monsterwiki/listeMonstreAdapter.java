@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//Création d'une CustomView pour notre ListView selon l'objet Monstre (class ListeMonstre)
+
 public class listeMonstreAdapter extends ArrayAdapter<listeMonstre> {
 
     public listeMonstreAdapter(Context context, ArrayList<listeMonstre> liste){
@@ -30,6 +32,7 @@ public class listeMonstreAdapter extends ArrayAdapter<listeMonstre> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listemonstre_item,parent, false);
         }
 
+        //Définition variables + find ID
         TextView nomMonstre = (TextView)convertView.findViewById(R.id.nomMonstre);
         TextView nomElement = (TextView)convertView.findViewById(R.id.nomElement);
         ImageView imageMonstre = (ImageView)convertView.findViewById(R.id.imageMonstre);
@@ -40,6 +43,7 @@ public class listeMonstreAdapter extends ArrayAdapter<listeMonstre> {
         imageMonstre.setImageResource(listeM.imageMonstre);
         imageElement.setImageResource(listeM.imageElement);
 
+        //Ajout d'une custom font au nom du monstre de l'élément
         Typeface police1 = Typeface.createFromAsset(getContext().getAssets(),"fonts/UnZialish.ttf");
         nomMonstre.setTypeface(police1);
         Typeface police2 = Typeface.createFromAsset(getContext().getAssets(),"fonts/Curse_Casual.ttf");

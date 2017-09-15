@@ -1,8 +1,6 @@
 package wildmonsters.monsterwiki;
 
-/**
- * Created by apprenti on 06/09/17.
- */
+//Définition objet Monstre (Nom du Monstre, de l'élément, image du monstre et de son élément
 
 public class listeMonstre {
     public String nomMonstre;

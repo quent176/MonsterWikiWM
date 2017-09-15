@@ -50,14 +50,13 @@ public class MainActivity extends AppCompatActivity {
         abar.setDisplayHomeAsUpEnabled(false);
         abar.setHomeButtonEnabled(false);
 
-        ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
-
-
+        //Appel de la CustomList (ListeMonstreAdapter) et de la listview du XML (Activity_main)
         arrayofliste = new ArrayList<listeMonstre>();
         adapter = new listeMonstreAdapter(this, arrayofliste);
         lv = (ListView) findViewById(R.id.list_monster);
         lv.setAdapter(adapter);
 
+        //Définition de nos monstres selon l'objet listeMonstre
         listeMonstre monstre1 = new listeMonstre("Fire Lion", "Fire", R.drawable.fire_lion_1, R.drawable.fire);
         listeMonstre monstre2 = new listeMonstre("Arch Knight", "Legend", R.drawable.arch_knight_1, R.drawable.legend);
         listeMonstre monstre3 = new listeMonstre("Genie", "Magic", R.drawable.genie_1, R.drawable.magic);
@@ -69,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
         listeMonstre monstre9 = new listeMonstre("Tyrannoking", "Dark", R.drawable.tyrannoking_1, R.drawable.dark);
         listeMonstre monstre10 = new listeMonstre("Turtle", "Water", R.drawable.turtle_1, R.drawable.water);
 
-
-
+        //Utilisation de la CustomList (Ajout des monstres dans la listview)
         adapter.add(monstre1);
         adapter.add(monstre2);
         adapter.add(monstre3);
@@ -82,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.add(monstre9);
         adapter.add(monstre10);
 
+        //Lors du clic sur une ligne de la liste, récuperer la position i et l'envoyer à DetailsActivity via intent
         lv.setOnItemClickListener(new OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {

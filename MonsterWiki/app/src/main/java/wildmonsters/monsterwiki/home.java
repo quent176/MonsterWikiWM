@@ -21,11 +21,12 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        // Bouton (ajout d'une custom font)
         Button home = (Button) findViewById(R.id.buttonHome);
         Typeface police5 = Typeface.createFromAsset(getAssets(),"fonts/Curse_Casual.ttf");
         home.setTypeface(police5);
 
-        //Customize the ActionBar
+        //Customize the ActionBar (centrer, texte personnalisé, custom font)
         final ActionBar abar = getSupportActionBar();
 
         View viewActionBar = getLayoutInflater().inflate(R.layout.action_bar, null);
@@ -43,11 +44,10 @@ public class home extends AppCompatActivity {
         abar.setDisplayHomeAsUpEnabled(false);
         abar.setHomeButtonEnabled(false);
 
+        //Image arriere plan
         ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
 
-
-
-
+        //Lors du clic sur le bouton, aller à MainActivity
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +56,7 @@ public class home extends AppCompatActivity {
             }
 
 });
-
+        //Lors du clic sur l'image background, aller à MainActivity
         homebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

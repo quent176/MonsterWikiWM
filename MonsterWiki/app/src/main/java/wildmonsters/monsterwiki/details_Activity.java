@@ -62,8 +62,7 @@ public class details_Activity extends AppCompatActivity {
         abar.setDisplayHomeAsUpEnabled(true);
         abar.setHomeButtonEnabled(true);
 
-        ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
-
+        // Récuperer position i avec l'intent de MainActivity
         final int monsterID;
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -74,6 +73,7 @@ public class details_Activity extends AppCompatActivity {
             monsterID = 0;
         }
 
+        //Définition variables
         nomMonstre = (TextView) findViewById(R.id.monsterName);
         evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
         imageMonsterMain = (ImageView) findViewById(R.id.imageMonsterMain);
@@ -92,7 +92,7 @@ public class details_Activity extends AppCompatActivity {
         monstreEvolution2 = (ImageView) findViewById(R.id.monsterEvolDeux);
         monstreEvolution3 = (ImageView) findViewById(R.id.monsterEvolTrois);
 
-
+        //custom font
         Typeface police4 = Typeface.createFromAsset(getAssets(), "fonts/UnZialish.ttf");
         nomMonstre.setTypeface(police4);
         Typeface police2 = Typeface.createFromAsset(getAssets(), "fonts/Curse_Casual.ttf");
@@ -101,7 +101,7 @@ public class details_Activity extends AppCompatActivity {
         monstreSpec.setTypeface(police2);
         monstreEvolution.setTypeface(police2);
 
-
+        //Selon la position du monstre, récupérée dans intent monsterID, alors afficher le monstre correspondant à son évolution 1
         if (monsterID == 0) {
             nomMonstre.setText("Fire Lion");
             evolutionMonstre.setText("Niveau 1");
@@ -275,6 +275,7 @@ public class details_Activity extends AppCompatActivity {
 
         }
 
+        //Onclic sur image de l'evolution 1, connaitre le monstre selon la position i et afficher les détails de son évolution
         monstreEvolution0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -363,6 +364,7 @@ public class details_Activity extends AppCompatActivity {
 
         });
 
+        //Onclic sur image de l'evolution 2, connaitre le monstre selon la position i et afficher les détails de son évolution
         monstreEvolution1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -452,6 +454,7 @@ public class details_Activity extends AppCompatActivity {
 
         });
 
+        //Onclic sur image de l'evolution 3, connaitre le monstre selon la position i et afficher les détails de son évolution
         monstreEvolution2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -540,6 +543,7 @@ public class details_Activity extends AppCompatActivity {
 
         });
 
+        //Onclic sur image de l'evolution 4, connaitre le monstre selon la position i et afficher les détails de son évolution
         monstreEvolution3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
