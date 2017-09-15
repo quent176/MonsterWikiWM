@@ -75,10 +75,8 @@ public class details_Activity extends AppCompatActivity {
         }
 
         nomMonstre = (TextView) findViewById(R.id.monsterName);
-
         evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
         imageMonsterMain = (ImageView) findViewById(R.id.imageMonsterMain);
-
         evolutionMonstre = (TextView) findViewById(R.id.monsterEvolution);
         elementMonstre = (TextView) findViewById(R.id.elementMonster);
         monstreSpec = (TextView) findViewById(R.id.monsterSpec);
@@ -107,9 +105,7 @@ public class details_Activity extends AppCompatActivity {
         if (monsterID == 0) {
             nomMonstre.setText("Fire Lion");
             evolutionMonstre.setText("Niveau 1");
-
             elementMonstre.setText("Fire");
-
             imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.fire_lion_1));
             imageElement.setImageDrawable(getResources().getDrawable(R.drawable.fire));
             lifeMonstre.setText("242");
@@ -422,10 +418,10 @@ public class details_Activity extends AppCompatActivity {
                 else if (monsterID == 6) {
                     imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.rockilla_1));
                     evolutionMonstre.setText("Niveau 1");
-                    lifeMonstre.setText("20");
-                    powerMonstre.setText("14");
-                    speedMonstre.setText("26");
-                    staminaMonstre.setText("10");
+                    lifeMonstre.setText("192");
+                    powerMonstre.setText("115");
+                    speedMonstre.setText("192");
+                    staminaMonstre.setText("100");
                 }
                 else if (monsterID == 7) {
                     imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.thunder_eagle_1));
@@ -570,7 +566,7 @@ public class details_Activity extends AppCompatActivity {
                     lifeMonstre.setText("323");
                     powerMonstre.setText("153");
                     speedMonstre.setText("425");
-                    staminaMonstre.setText("15860");
+                    staminaMonstre.setText("100");
                 }
                 else if (monsterID == 3) {
                     imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.light_spirit_3));
@@ -578,7 +574,7 @@ public class details_Activity extends AppCompatActivity {
                     lifeMonstre.setText("20050");
                     powerMonstre.setText("16744");
                     speedMonstre.setText("26547");
-                    staminaMonstre.setText("15860");
+                    staminaMonstre.setText("100");
                 }
                 else if (monsterID == 4) {
                     imageMonsterMain.setImageDrawable(getResources().getDrawable(R.drawable.metalsaur_3));
