@@ -1,8 +1,9 @@
-# Monster Wiki (a WCS Project)
-## By the Wild Monster Team (Josselyn, Quentin, Samuel)
+# Monster Wiki (Wild Code School Project)
+## By the Wild Monster Team (Josselyn M., Quentin D., Samuel M.)
 
 Based on the game "Monster Legends" and the Wiki "Monster Legends Wiki" (http://monster-wiki.com/)
 
 Made with Android Studio.
-2 pages with a list of monsters : 1 scrollable page + 1 description page
+- 1 scrollable page with a list of monsters
+- On click, description page of the chosen monster
 
